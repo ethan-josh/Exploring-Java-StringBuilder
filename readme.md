@@ -33,3 +33,30 @@ The append() method adds the specified content to the end of the existing sequen
 <img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex1-additional.png"/>
 
 ---
+
+### Exercise 2: insert() - Inserting Content at a Position
+
+**Code to run:**
+```
+public class ExploringStringBuilder {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Java is great!");
+        sb.insert(8, "really ");
+        System.out.println(sb);
+    }
+}
+```
+**Predicted Output:**
+```
+Java is really great!
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex2.png"/>
+
+**Explanation:**
+
+The insert(int offset, String str) method adds the string str at the index specified by offset. In this case, "really " is inserted starting at index 8. The original text "great!" is pushed to the right to make space.
+
+---
