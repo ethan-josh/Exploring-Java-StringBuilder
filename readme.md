@@ -96,3 +96,27 @@ deleteCharAt(int index) removes the single character at the specified index. Her
 
 ---
 
+### Exercise 4: replace() - Replacing a Section
+
+**Code to run:**
+```
+public class ExploringStringBuilder {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("I like programming in Python.");
+        sb.replace(24, 30, "Java");
+        System.out.println(sb);
+    }
+}
+```
+**Predicted Output:**
+```
+I like programming in PyJava
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex4.png"/>
+
+**Explanation:**
+
+The replace(int start, int end, String str) method removes the characters in the range from start to end-1 and then inserts str at the start position. Here, "thon." (from index 24 to 30(beyond length)) is replaced with "Java".

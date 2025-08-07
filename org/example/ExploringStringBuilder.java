@@ -20,20 +20,23 @@ public class ExploringStringBuilder{
         sb2.insert(8, "really ");
         //System.out.println(sb2);
         // *****************************************
+        
+
+        // Example #3 ******************************
         StringBuilder sb3 = new StringBuilder("This is a test sentence.");
         // Deletes " a test"
         sb3.delete(8, 16); 
-        System.out.println("After delete(8, 16): " + sb3);
+        //System.out.println("After delete(8, 16): " + sb3);
 
         // Deletes the character at index 4 (the ' ')
         sb3.deleteCharAt(4);
-        System.out.println("After deleteCharAt(4): " + sb3);
-        // Example #3 ******************************
-
+        //System.out.println("After deleteCharAt(4): " + sb3);
         // *****************************************
 
         // Example #4 ******************************
-
+        StringBuilder sb4 = new StringBuilder("I like programming in Python.");
+        sb4.replace(24, 30, "Java");
+        System.out.println(sb4);
         // *****************************************
 
         // Example #5 ******************************
