@@ -150,3 +150,45 @@ sb starts as "Start".
 sb.append("...") changes sb to "Start...".
 sb.insert(0, "Ready, Set, ") changes sb to "Ready, Set, Start...".
 sb.delete(12, 15) removes "Sta" from sb, resulting in "Ready, Set, rt...".
+
+---
+
+### Exercise 6: substring(), indexOf(), and Non-Existing Words
+
+**Code to run:**
+```
+public class ExploringStringBuilder {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("The quick brown fox jumps over the lazy dog.");
+        
+        // Substring returns a String, it does not modify the StringBuilder
+        String sub = sb.substring(16, 19);
+        System.out.println("Substring: " + sub);
+        
+        // indexOf works just like in String
+        int indexOfFox = sb.indexOf("fox");
+        System.out.println("Index of 'fox': " + indexOfFox);
+        
+        // Searching for a word that doesn't exist
+        int indexOfCat = sb.indexOf("cat");
+        System.out.println("Index of 'cat': " + indexOfCat);
+    }
+}
+```
+**Predicted Output:**
+```
+Substring: fox
+Index of 'fox': 16
+Index of 'cat': -1
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex6.png"/>
+
+**Explanation:**
+
+sb starts as "Start".
+sb.append("...") changes sb to "Start...".
+sb.insert(0, "Ready, Set, ") changes sb to "Ready, Set, Start...".
+sb.delete(12, 15) removes "Sta" from sb, resulting in "Ready, Set, rt...".
