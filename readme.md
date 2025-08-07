@@ -22,7 +22,7 @@ Hello, Cadets
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex1.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-StringBuilder/blob/main/images/Ex1.png"/>
 
 **Explanation:**
 
@@ -30,7 +30,7 @@ The append() method adds the specified content to the end of the existing sequen
 
 **Additional:**
 
-<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex1-additional.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-StringBuilder/blob/main/images/Ex1-additional.png"/>
 
 ---
 
@@ -53,7 +53,7 @@ Java is really great!
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex2.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-StringBuilder/blob/main/images/Ex2.png"/>
 
 **Explanation:**
 
@@ -86,7 +86,7 @@ After deleteCharAt(4): Thisis entence.
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex3.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-StringBuilder/blob/main/images/Ex3.png"/>
 
 **Explanation:**
 
@@ -115,7 +115,7 @@ I like programming in PyJava
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex4.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-StringBuilder/blob/main/images/Ex4.png"/>
 
 **Explanation:**
 
@@ -142,7 +142,7 @@ Ready, Set, rt...
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex5.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-StringBuilder/blob/main/images/Ex5.png"/>
 
 **Explanation:**
 
@@ -184,11 +184,46 @@ Index of 'cat': -1
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex6.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-StringBuilder/blob/main/images/Ex6.png"/>
 
 **Explanation:**
 
-sb starts as "Start".
-sb.append("...") changes sb to "Start...".
-sb.insert(0, "Ready, Set, ") changes sb to "Ready, Set, Start...".
-sb.delete(12, 15) removes "Sta" from sb, resulting in "Ready, Set, rt...".
+substring(16, 19) creates a new String object with the value "fox" from the builder's content. The StringBuilder itself remains unchanged.
+indexOf("fox") returns the starting index of the first occurrence of "fox", which is 16.
+indexOf("cat") searches for the substring "cat". Since it cannot be found, the method returns -1.
+
+---
+
+### Exercise 7: toString() - Converting back to a String
+
+**Code to run:**
+```
+public class ExploringStringBuilder {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Status: ");
+        sb.append("Pending");
+        
+        // Now, we need a final, unchangeable String
+        String finalStatus = sb.toString();
+        
+        // Let's try to change the StringBuilder again
+        sb.append(" - Approved"); 
+        
+        System.out.println("StringBuilder: " + sb);
+        System.out.println("Final String: " + finalStatus);
+    }
+}
+```
+**Predicted Output:**
+```
+StringBuilder: Status: Pending - Approved
+Final String: Status: Pending
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/JC-Exploring-StringBuilder/blob/main/images/Ex7.png"/>
+
+**Explanation:**
+
+The toString() method creates a new String object that contains the sequence of characters currently in the StringBuilder. When we created finalStatus, it was a snapshot of sb at that moment ("Status: Pending"). Later modifications to sb do not affect the finalStatus string, demonstrating the immutable nature of String and the mutable nature of StringBuilder.
