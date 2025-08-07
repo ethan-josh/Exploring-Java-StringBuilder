@@ -36,11 +36,13 @@ public class ExploringStringBuilder{
         // Example #4 ******************************
         StringBuilder sb4 = new StringBuilder("I like programming in Python.");
         sb4.replace(24, 30, "Java");
-        System.out.println(sb4);
+        // System.out.println(sb4);
         // *****************************************
 
         // Example #5 ******************************
-
+        StringBuilder sb5 = new StringBuilder("Start");
+        sb5.append("...").insert(0, "Ready, Set, ").delete(12, 15);
+        System.out.println(sb5);
         // *****************************************
 
         // Example #6 ******************************

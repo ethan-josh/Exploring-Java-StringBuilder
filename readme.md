@@ -120,3 +120,33 @@ I like programming in PyJava
 **Explanation:**
 
 The replace(int start, int end, String str) method removes the characters in the range from start to end-1 and then inserts str at the start position. Here, "thon." (from index 24 to 30(beyond length)) is replaced with "Java".
+
+---
+
+### Exercise 5: replace() - Replacing a Section
+
+**Code to run:**
+```
+public class ExploringStringBuilder {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Start");
+        sb.append("...").insert(0, "Ready, Set, ").delete(12, 15);
+        System.out.println(sb);
+    }
+}
+```
+**Predicted Output:**
+```
+Ready, Set, rt...
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex5.png"/>
+
+**Explanation:**
+
+sb starts as "Start".
+sb.append("...") changes sb to "Start...".
+sb.insert(0, "Ready, Set, ") changes sb to "Ready, Set, Start...".
+sb.delete(12, 15) removes "Sta" from sb, resulting in "Ready, Set, rt...".
