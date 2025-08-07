@@ -60,3 +60,39 @@ Java is really great!
 The insert(int offset, String str) method adds the string str at the index specified by offset. In this case, "really " is inserted starting at index 8. The original text "great!" is pushed to the right to make space.
 
 ---
+
+### Exercise 3: delete() - Deleting Content
+
+**Code to run:**
+```
+public class ExploringStringBuilder {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("This is a test sentence.");
+        // Deletes " a test"
+        sb.delete(8, 16); 
+        System.out.println("After delete(8, 16): " + sb);
+
+        // Deletes the character at index 4 (the ' ')
+        sb.deleteCharAt(4);
+        System.out.println("After deleteCharAt(4): " + sb);
+    }
+}
+```
+**Predicted Output:**
+```
+After delete(8, 16): This is entence.
+After deleteCharAt(4): Thisis entence.
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/Exploring-Java-StringBuilder/blob/main/images/Ex3.png"/>
+
+**Explanation:**
+
+delete(int start, int end) removes the sequence of characters from the start index up to, but not including, the end index. Here, it removes the characters from index 8 ("a") to 15 ("t").
+
+deleteCharAt(int index) removes the single character at the specified index. Here, it removes the space at index 4.
+
+---
+

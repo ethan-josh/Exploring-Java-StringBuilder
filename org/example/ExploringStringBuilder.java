@@ -18,9 +18,16 @@ public class ExploringStringBuilder{
 		// Example #2 ******************************
         StringBuilder sb2 = new StringBuilder("Java is great!");
         sb2.insert(8, "really ");
-        System.out.println(sb2);
+        //System.out.println(sb2);
         // *****************************************
+        StringBuilder sb3 = new StringBuilder("This is a test sentence.");
+        // Deletes " a test"
+        sb3.delete(8, 16); 
+        System.out.println("After delete(8, 16): " + sb3);
 
+        // Deletes the character at index 4 (the ' ')
+        sb3.deleteCharAt(4);
+        System.out.println("After deleteCharAt(4): " + sb3);
         // Example #3 ******************************
 
         // *****************************************
